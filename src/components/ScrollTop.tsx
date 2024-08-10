@@ -1,40 +1,35 @@
-import { useEffect, useState } from "react"
-import { useScrollY } from "@/hooks/useScrollY"
-import { IconArrowUP } from "./Icons"
+import { useEffect } from "react";
+import { useScrollY } from "@/hooks/useScrollY";
+import { IconArrowUP } from "./Icons";
 
 export default function ScrollTop() {
-    const [className, setClassName] = useState("")
-    const scrollY = useScrollY();
-    const [visivelButton, setVisivelButton] = useState(scrollY ? true : false)
-    const styleButton = {
-        display: "flex",
-        bottom: '50px',
-        right: '50px',
+  const scrollY = useScrollY();
+
+  useEffect(() => {
+    const button = document.getElementById("scrollTopButton");
+    if (scrollY > 0 && button != null) {
+      button.classList.remove("hidden");
+    } else if (button != null) {
+      button.classList.add("hidden");
     }
+  }, [scrollY]);
 
-    useEffect(() => {
-        setVisivelButton(scrollY > 0 ? true : false);
-    })
+  function BackToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Para uma rolagem suave
+    });
+  }
 
-
-    function BackToTop() {
-        console.log(scrollY)
-        window.scrollTo(0, 0);
-        setClassName("animation transition delay-100 duration-100")
-    }
-
-    return (
-        <div className="">
-            {   visivelButton ?
-                <button style={styleButton} onClick={BackToTop} 
-                className={`${className} fixed scale-150 animate-pulse hover:animate-none hover:-translate-y-2 text-red-400  hover:text-red-600 px-1`}>
-                    {IconArrowUP}
-                </button>
-                :
-                <></>
-            }
-
-        </div>
-    )
-      
+  return (
+    <button
+      id="scrollTopButton"
+      onClick={BackToTop}
+      className="fixed bottom-10 right-10 p-2 bg-blue-400 text-white rounded-lg 
+                 hover:bg-blue-600 transition duration-500 ease-in-out delay-100 
+                 animate-pulse hover:animate-none hover:-translate-y-2 hidden"
+    >
+      {IconArrowUP}
+    </button>
+  );
 }

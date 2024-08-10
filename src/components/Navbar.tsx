@@ -15,14 +15,15 @@ interface NavBarProps {
 
 function Item(props: ItemProps) {
     return (
-        <a className={`p-2 ${props.className}`} href={props.destino}>{props.nome}</a>
+        <a className={`font-mono text-base font-semibold ${props.className} mr-4`} href={props.destino}>{props.nome}</a>
     )
 }
 
 function ItensNavbar(props: NavBarProps) {
     return (
-        <div className="duration-1000 delay-1000 transition-transform">
-            <Item className={props.className} nome={"Fale comigo"} destino={"/#falecomigo"}/>
+        <div className="duration-1000 delay-1000 transition-transform px-2 ">
+            <Item className={props.className} nome={"Sobre"} destino={"/#falecomigo"}/>
+            <Item className={props.className} nome={"Redes"} destino={"/#falecomigo"}/>
         </div>
     )
 }
@@ -42,20 +43,20 @@ export default function Navbar(props: NavBarProps) {
     }, [width])
 
     return (
-        <div className={`fixed w-screen p-3`}>
+        <div className={`fixed w-screen p-3 top-0 border-b border-gray-200 bg-slate-50`}>
             {ham ?
                 <div className="flex justify-end">
-                    <button onClick={() => setItensHam(!itensHam)} className="text-white mr-4">{IconMenuHamburguer} </button>  
+                    <button onClick={() => setItensHam(!itensHam)} className="mr-4">{IconMenuHamburguer} </button>  
                 </div>
                 :
-                <div className="flex justify-end uppercase text-white font-bold">
+                <div className="flex justify-end uppercasefont-bold">
                     <ItensNavbar />
                 </div>
             }
 
             {itensHam ?
                 
-                <ItensNavbar className={"flex text-white font-bold"} />
+                <ItensNavbar className={"flex font-bold"} />
                 :
                 <></>
 
