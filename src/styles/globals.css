@@ -31,3 +31,20 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.card-container {
+  display: flex; /* Habilita o Flexbox */
+  justify-content: space-between; /* Distribui os cards com espaço entre eles */
+  width: 100%; /* Ocupa a largura total da tela */
+  padding: 20px; /* Adicione espaçamento interno se desejar */
+}
+
+.card {
+  /* Estilos do seu card */
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* Garante que os cards ocupem o espaço disponível igualmente */
+  margin: 0 10px; /* Adiciona uma margem entre os cards */
+}

@@ -10,8 +10,8 @@ interface InfoCardProps {
 const InfoCard: React.FC<InfoCardProps> = ({ title, describe, color, textColor }) => {
   return (
     <div className={`${color} justify-center font-mono ${textColor} py-40 px-20 text-center`}>
-      <h2 className="text-2xl font-bold mb-3">{title}</h2>
-      <p>{describe}</p>
+      <h2 className="text-2xl sm:text-sm font-bold mb-3">{title}</h2>
+      <p className='sm:text-sm'>{describe}</p>
     </div>
   );
 };

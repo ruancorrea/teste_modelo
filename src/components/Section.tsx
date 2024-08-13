@@ -1,4 +1,6 @@
+import CardGrid from "./CardGrid";
 import  CardGroup, { Card }  from "./CardGroup";
+import CardSocialMedia from "./CardSocialMedia";
 import ImageCard from "./ImageCard";
 import InfoCard from "./InfoCard";
 
@@ -67,6 +69,11 @@ export default function Section(props: SectionProps) {
 
             <ImageCard path_image="/image.jpeg"  />
 
+            <div className="card-container">
+                <CardSocialMedia name="Ruan Correa" link='#' icon='Facebook' />
+                <CardSocialMedia name="@ruancorrea10" link='#' icon='Instagram' />
+            </div>
+
             <InfoCard 
                 title="CONTATO" 
                 describe="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -75,6 +82,8 @@ export default function Section(props: SectionProps) {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                 color="bg-slate-500"
                 textColor="text-white"/>
+
+
 
         </section>
     )
