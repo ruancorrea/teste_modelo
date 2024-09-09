@@ -25,8 +25,8 @@ export default function ScrollTop() {
     <button
       id="scrollTopButton"
       onClick={BackToTop}
-      className="fixed bottom-10 right-10 p-2 bg-blue-400 text-white rounded-lg 
-                 hover:bg-blue-600 transition duration-500 ease-in-out delay-100 
+      className="fixed bottom-10 right-10 p-2 bg-pink-200 text-white rounded-lg 
+                 hover:bg-pink-400 transition duration-500 ease-in-out delay-100 
                  animate-pulse hover:animate-none hover:-translate-y-2 hidden"
     >
       {IconArrowUP}

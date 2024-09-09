@@ -24,7 +24,7 @@ export default function Section(props: SectionProps) {
             </p>, header: 'Apoio às famílias e idosos'},
       ];
 
-    let title = "MÉRCIA DA SAÚDE";
+    let title = "SOBRE MIM";
     let describe = "Com mais de 30 anos de experiência como técnica de enfermagem, dediquei minha vida a cuidar da saúde e bem-estar da nossa comunidade. Agora, estou pronta para levar esse compromisso ao próximo nível como candidata a Vereadora por Atalaia."
 
             
@@ -47,6 +47,20 @@ export default function Section(props: SectionProps) {
 
             <div className="flex justify-center">
                 <ImageCard path_image="/motivos.jpg"  />
+            </div>
+
+            
+
+            <div>
+                <InfoCard 
+                    title="06/10 É 15666!"
+                    describe={["No dia 06 de outubro, vote: Mércia da Saúde - 15666",
+                                "Juntos podemos continuar com a mudança de Atalaia!",
+                                "Razão social: Dirlene Mércia Cavalcante da Silva",
+                                "CNPJ: 56.473.096/0001-60",
+                                "Partido: MBD e PP",
+                                "Coligação: Coração Do Povo"]}
+                />
             </div>
 
             <div className="card-container flex-col-reverse lg:flex-row lg:justify-between">
