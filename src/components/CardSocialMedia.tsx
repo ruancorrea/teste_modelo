@@ -6,7 +6,7 @@ import {
     IconTikTok,
     IconXTwitter,
     IconYouTube,
-    IconSaudeProfessional,
+    Hospital,
     IconHands,
     IconFoguete,
     IconKey,
@@ -39,8 +39,8 @@ export default function CardSocialMedia (props: CardSocialMediaProps){
             case 'X':
                 setIconApplication(IconXTwitter);
                 break;
-            case 'SaudeProfessional':
-                setIconApplication(IconSaudeProfessional);
+            case 'Hospital':
+                setIconApplication(Hospital);
                 break;
             case 'ApertoMaos':
                 setIconApplication(IconHands);
@@ -57,7 +57,7 @@ export default function CardSocialMedia (props: CardSocialMediaProps){
     }, [props.icon]); 
     
     return (
-        <a href={props.link} className="card bg-pink-200 rounded-lg p-5 shadow-md">
+        <a href={props.link} className="card bg-pink-200 rounded-lg p-5 shadow-md mt-50">
              <div className="flex justify-center">
                 <div className="rounded-full p-2">
                     {iconApplication} 

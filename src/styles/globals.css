@@ -46,4 +46,5 @@ body {
   border-radius: 8px;
   flex: 1; /* Garante que os cards ocupem o espaço disponível igualmente */
   margin: 0 10px; /* Adiciona uma margem entre os cards */
+  margin-bottom: 8px;
 }
