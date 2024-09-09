@@ -18,12 +18,11 @@ const CardGroup: React.FC<CardGroupProps> = ({ cards }) => {
   };
 
   return (
-    <div className='my-12 '>
-      <h1 className="flex justify-center w-full" >
+    <div className='my-12'>
+      <h1 className="flex justify-center w-full"  >
           PROJETOS
         </h1>
-      
-      <div className="flex justify-center w-full" id="projetos">
+      <div className="flex justify-center w-full" >
         {cards.map((card) => (
           <button
             key={card.titulo}

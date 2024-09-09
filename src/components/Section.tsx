@@ -30,9 +30,11 @@ export default function Section(props: SectionProps) {
             
     return (
         <section className="">
-            <InfoCard title={title} describe={[describe]}/>
+            <div id="sobre">
+                <InfoCard title={title} describe={[describe]}/>
+            </div>
 
-            <div className="p-4 flex justify-center">
+            <div className="p-4 flex justify-center" id='projetos'>
               <CardGroup cards={meusCards} />
             </div>
 
@@ -53,10 +55,12 @@ export default function Section(props: SectionProps) {
                 <CardSocialMedia name="Portas abertas sempre" link='#' icon='Chave' />
             </div>
 
-            <InfoCard 
-                title="CONTATO" 
-                describe={["Siga nosso Instagram: @merciadasaude","Nosso e-mail: contato@marciadasaude.com.br"]}
-                textColor="text-white"/>
+            <div id="contato">
+                <InfoCard 
+                    title="CONTATO" 
+                    describe={["Siga nosso Instagram: @merciadasaude","Nosso e-mail: contato@marciadasaude.com.br"]}
+                    textColor="text-white"/>
+            </div>
 
         </section>
     )

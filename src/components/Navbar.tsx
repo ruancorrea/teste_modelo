@@ -23,9 +23,9 @@ function Item(props: ItemProps) {
 function ItensNavbar(props: NavBarProps) {
     return (
         <div className="duration-1000 delay-1000 transition-transform px-2 ">
+            <Item className={props.className} nome={"Sobre"} destino={"/#sobre"}/>
             <Item className={props.className} nome={"Projetos"} destino={"/#projetos"}/>
-            <Item className={props.className} nome={"Sobre"} destino={"/#falecomigo"}/>
-            <Item className={props.className} nome={"Redes"} destino={"/#falecomigo"}/>
+            <Item className={props.className} nome={"Contato"} destino={"/#contato"}/>
         </div>
     )
 }
