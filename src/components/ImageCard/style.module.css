@@ -1,5 +1,12 @@
 .imgContainer {
     position: relative;
-    width: 100%;    /* ou largura específica */
-    height: 500px;  
+    width: 100%;
+    height: 100%;
+    z-index: 1;  /* Garante que a imagem fique atrás de outros elementos, se necessário */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+}
+
+.header {
+    position: relative; /* Adiciona a posição relativa ao header para controle do z-index */
+    z-index: 10;  /* Garante que o header (e outros elementos dentro dele, como o navbar) fique sobre a imagem */
 }

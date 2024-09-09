@@ -1,19 +1,18 @@
-import Image from 'next/image';
-import styles from './style.module.css'
 
 interface SectionProps {
-  path_image: string,
+  path_image: string;
+  alt_text?: string; // Para permitir que o texto alternativo seja opcional
 }
 
 export default function ImageCard(props: SectionProps) {
   return (
-    <div className={styles.imgContainer} >
-        <Image
-            src={props.path_image}
-            alt="Descrição da imagem"
-            layout='fill'
-        />
+    <div className="imgContainer">
+      <img
+        src={props.path_image}
+        alt={props.alt_text || "Descrição da imagem"}
+        className="image"
+      />
     </div>
-
+      
   );
 }

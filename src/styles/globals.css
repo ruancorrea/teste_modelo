@@ -42,7 +42,6 @@ body {
 
 .card {
   /* Estilos do seu card */
-  background-color: #f0f0f0;
   padding: 20px;
   border-radius: 8px;
   flex: 1; /* Garante que os cards ocupem o espaço disponível igualmente */

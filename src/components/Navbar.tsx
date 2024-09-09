@@ -23,6 +23,7 @@ function Item(props: ItemProps) {
 function ItensNavbar(props: NavBarProps) {
     return (
         <div className="duration-1000 delay-1000 transition-transform px-2 ">
+            <Item className={props.className} nome={"Projetos"} destino={"/#projetos"}/>
             <Item className={props.className} nome={"Sobre"} destino={"/#falecomigo"}/>
             <Item className={props.className} nome={"Redes"} destino={"/#falecomigo"}/>
         </div>
@@ -47,12 +48,12 @@ export default function Navbar(props: NavBarProps) {
         <div className={`fixed w-screen p-3 top-0 border-b border-gray-200 bg-slate-50`}>
             {ham ?
                 <div className="flex justify-between">
-                    <Image src={'/carta.png'} alt="Descrição da imagem" width={30} height={1} />
+                    <Image src={'/nav.png'} alt="Descrição da imagem" width={30} height={1} />
                     <button onClick={() => setItensHam(!itensHam)} className="mr-4">{IconMenuHamburguer} </button>  
                 </div>
                 :
                 <div className="flex justify-between uppercasefont-bold">
-                    <Image src={'/carta.png'} alt="Descrição da imagem" width={30} height={1} />
+                    <Image src={'/nav.png'} alt="Descrição da imagem" width={30} height={1} />
                     <ItensNavbar />
                 </div>
             }

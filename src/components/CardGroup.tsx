@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 export interface Card {
+  header: string;
   titulo: string;
   conteudo: React.ReactNode;
 }
@@ -18,7 +19,11 @@ const CardGroup: React.FC<CardGroupProps> = ({ cards }) => {
 
   return (
     <div className='my-12 '>
-      <div className="flex justify-center w-full">
+      <h1 className="flex justify-center w-full" >
+          PROJETOS
+        </h1>
+      
+      <div className="flex justify-center w-full" id="projetos">
         {cards.map((card) => (
           <button
             key={card.titulo}
@@ -37,6 +42,7 @@ const CardGroup: React.FC<CardGroupProps> = ({ cards }) => {
         {cards.map((card) => (
           card.titulo === cardAtivo && (
             <div key={card.titulo} className='lg:w-1/2 '>
+                <h1>{card.header}</h1>
                 {card.conteudo}
             </div>
           )
