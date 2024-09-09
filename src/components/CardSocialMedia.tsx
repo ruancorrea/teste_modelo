@@ -57,7 +57,7 @@ export default function CardSocialMedia (props: CardSocialMediaProps){
     }, [props.icon]); 
     
     return (
-        <a href={props.link} className="card bg-pink-200 rounded-lg p-5 shadow-md mt-50">
+        <a href={props.link} className="card bg-pink-200 rounded-lg p-5 shadow-md">
              <div className="flex justify-center">
                 <div className="rounded-full p-2">
                     {iconApplication} 
