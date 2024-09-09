@@ -49,7 +49,10 @@ export default function Section(props: SectionProps) {
                 <ImageCard path_image="/motivos.jpg"  />
             </div>
 
-            
+            <div className="card-container flex-col-reverse lg:flex-row lg:justify-between">
+                <CardSocialMedia name="Experiência comprovada em saúde" link='#' icon='Hospital' />
+                <CardSocialMedia name="Compromisso com o cuidado" link='#' icon='ApertoMaos' />
+            </div>
 
             <div>
                 <InfoCard 
@@ -64,8 +67,6 @@ export default function Section(props: SectionProps) {
             </div>
 
             <div className="card-container flex-col-reverse lg:flex-row lg:justify-between">
-                <CardSocialMedia name="Experiência comprovada em saúde" link='#' icon='Hospital' />
-                <CardSocialMedia name=" Compromisso com o cuidado" link='#' icon='ApertoMaos' />
                 <CardSocialMedia name="Continuar o progresso" link='#' icon='Foguete' />
                 <CardSocialMedia name="Portas abertas sempre" link='#' icon='Chave' />
             </div>
