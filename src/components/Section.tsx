@@ -74,7 +74,7 @@ export default function Section(props: SectionProps) {
             <div id="contato">
                 <InfoCard 
                     title="CONTATO" 
-                    describe={["Siga nosso Instagram: @merciadasaude","Nosso e-mail: contato@marciadasaude.com.br"]}
+                    describe={["Siga nosso Instagram: @merciadasaude","Nosso e-mail: contato@merciadasaude.com.br"]}
                     textColor="text-white"/>
             </div>
 
